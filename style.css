@@ -1,0 +1,42 @@
+:root { --bg: #040714; --card: #1a1d29; --blue: #0063e5; --input: #31343e; }
+body { background: var(--bg); color: white; font-family: 'Segoe UI', sans-serif; margin: 0; overflow: hidden; }
+.hidden { display: none !important; }
+
+.focusable:focus { 
+    outline: none; transform: scale(1.05); border: 3px solid white !important; box-shadow: 0 0 20px var(--blue);
+}
+
+/* LOGIN ANDROID */
+#sc-login { background: radial-gradient(circle at center, #070b1f 0%, #040714 100%); display: flex; justify-content: center; align-items: center; height: 100vh; }
+.login-box { width: 380px; padding: 40px; background: rgba(26, 29, 41, 0.95); border-radius: 20px; text-align: center; }
+.logo-title { font-size: 3.5rem; font-weight: 800; }
+.logo-title span { color: var(--blue); }
+#sc-login input { width: 100%; padding: 16px; margin-bottom: 15px; background: #31343e; border: 2px solid transparent; border-radius: 12px; color: white; box-sizing: border-box; }
+.btn-login-main { width: 100%; padding: 16px; background: var(--blue); color: white; border: none; border-radius: 12px; font-weight: bold; cursor: pointer; }
+
+/* NAVBAR */
+.navbar { padding: 15px 40px; background: var(--bg); border-bottom: 1px solid #1a1d29; }
+.nav-top { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+#search-box { flex-grow: 1; padding: 12px; border-radius: 10px; background: var(--input); border: none; color: white; }
+.brand-bar { display: flex; gap: 10px; justify-content: center; margin-top: 15px; }
+.brand-bar button { background: var(--card); color: white; border: 1px solid #333; padding: 10px 18px; border-radius: 8px; }
+
+/* GRID */
+.movie-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; padding: 30px 40px; height: 65vh; overflow-y: auto; }
+.poster { width: 100%; aspect-ratio: 2/3; background-size: cover; border-radius: 12px; border: 2px solid transparent; }
+
+/* REPRODUCTOR FULLSCREEN */
+.player-overlay { position: fixed; inset: 0; background: #000; z-index: 9999; }
+.video-frame { width: 100%; height: 100%; }
+.player-ui { position: absolute; inset: 0; padding: 40px; display: flex; flex-direction: column; justify-content: space-between; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent, rgba(0,0,0,0.9)); }
+
+/* TÍTULO EN EL REPRODUCTOR */
+.ui-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.title-container { background: rgba(0,0,0,0.5); padding: 10px 20px; border-radius: 10px; border-left: 5px solid var(--blue); }
+#player-title { margin: 0; font-size: 1.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); }
+
+.controls-row { display: flex; gap: 20px; justify-content: center; }
+.btn-p { background: rgba(255,255,255,0.1); color: white; border: 2px solid white; padding: 15px 35px; border-radius: 12px; font-weight: bold; }
+.btn-red { background: #e50914; color: white; border: none; padding: 12px 25px; border-radius: 8px; }
+.episodes-grid { display: flex; gap: 10px; overflow-x: auto; padding: 10px 0; }
+.btn-ep { background: var(--blue); color: white; border: none; padding: 10px 15px; border-radius: 5px; }
